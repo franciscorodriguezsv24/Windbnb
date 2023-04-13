@@ -1,9 +1,65 @@
-
+:root{
+    --sp-gray:#828282;
+    --dark-gray:#4F4F4F;
+    --red-start:#EB5757;
+    --most-gray:#333333;
+    --monserat: 'Montserrat', sans-serif;
+}
 /* Font Family 
 font-family: 'Montserrat', sans-serif;
 font-family: 'Mulish', sans-serif;
 */
 
+.gray{
+    color: var(--sp-gray)
+}
+
+.dk-gray{
+    color: var(--dark-gray);
+}
+
+.rd-start{
+    color: var(--red-start);
+}
+
+.mt-gray{
+    color: var(--most-gray);
+}
+
+.monrat{
+    font-family: var(--monserat);
+}
+
 .card-img{
-    width: 224px;
+    width: 24rem;
+}
+
+.img1{
+    height: 269px;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+  width:15.76px;
+  height:15.76px ;
+  box-sizing: border-box;
+}
+
+.tx-gray{
+    font-size: 14px;
+}
+
+.sp{
+    font-size: 12px;
+    width: 100px;
+
+}
+.raiting{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
 }
