@@ -37,13 +37,56 @@
       <img src="./img/logo.png" alt="">
     </div>
 
-    <article class="d-flex rounded-4">
-      <p class="p-3 m-0 cursor-text">Add location</p>
-      <p class="p-3 m-0 border-start border-end border-light-subtle user-select-none">Add guests</p>
+    <article class="pointer d-flex rounded-4">
+      <p class="p-3 m-0 cursor-text" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add location</p>
+     
+      <p class="p-3 m-0 border-start border-end border-light-subtle pointer">Add guests</p>
       <!-- Icono Search de google Icons -->
-      <span class="material-symbols-outlined text-danger p-3 pointer">
-        search
-      </span>
+     
+        <span class="material-symbols-outlined text-danger p-3 pointer" >
+          search
+        </span>
+
+        <!-- Aca crearemos la ventana emergente -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-class">
+            <div class="modal-content ">
+              <button type="button" class="btn-close p-3" data-bs-dismiss="modal" aria-label="Close"></button>
+              <div class="modal-body row mt-5 gap-2">
+                <div class="filter1 container d-flex flex-column ms-5  col-sm-12 col-xl-5 m-0">
+                  <p class="mb-0 mul">location</p>
+                  <p class="mb-0 mul">city, country</p>
+                </div>
+                <div class="container d-flex flex-column ms-5 col-sm-12 col-xl-5 m-0">
+                  <p class="mb-0 mul">Guests</p>
+                  <p class="mb-0 mul gray">Add guests</p>
+                </div>
+                <button class=" red-bt botton-sr rd-start-bg rounded-4 col-xl-2 text-white d-flex flex-row" type="button">
+                    <span class="material-symbols-outlined text-white pointer text-center icon-sr " >search</span>
+                    <p class="m-0 mul">search</p>
+                </button>
+                <div class="filters mt-5 mb-5 row">
+                  <ul class=" col-6 d-flex flex-column gap-4 ">
+                    <li>Location 1</li>
+                    <li>Location 2</li>
+                    <li>Location 3</li>
+                    <li>Location 4</li>
+                  </ul>
+                  <div class="col-6 counter">
+                    <p class="mb-0 mul">Adult</p>
+                    <p class="mb-0 mul gray">Age 13 or above</p>
+                  </div>
+                </div>
+              
+             
+             
+              </div>
+             
+            </div>
+          </div>
+        </div>
+     
+
     </article>
   </header>
   <main>
@@ -60,10 +103,13 @@
 
         <!-- Aqui van los cards, cada uno debe llevar la clase 'col' -->
      
-        
+                
       </div>
     </section>
   </main>
+
+
+
 </body>
 
 </html>

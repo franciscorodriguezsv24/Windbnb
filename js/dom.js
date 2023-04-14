@@ -17,9 +17,9 @@ const newCard = (obj) => {
     </div>
     <div class="info d-flex justify-content-start mt-3 gap-2">
       <div class="row gap-2 flex-fill">
-        <spam class=" ms-2 col-4 text-center px-0 border border-dark rounded-pill text-uppercase sp fw-bold py-1 dk-gray">${obj.superHost}</spam>
-        <spam class="col-7 text-start tx-gray px-0 gray py-1">${obj.type}. ${obj.beds}beds</spam>
-        <spam class="col text-start tx-title mt-gray monrat">${obj.title}</spam>
+        <spam class=" ${!obj.superHost ? 'hide':''} ms-2 col-4 text-center px-0 border border-dark rounded-pill text-uppercase sp fw-bold py-1 dk-gray">Super Host</spam>
+        <spam class="col-7 text-start tx-gray px-0 gray py-1 type">${obj.type}. ${obj.beds}beds</spam>
+        <spam class="col-12 text-start tx-title mt-gray monrat">${obj.title}</spam>
       </div>
       <div class="d-flex flex-row gap-2">
         <span class="material-symbols-outlined rd-start">
@@ -32,6 +32,8 @@ const newCard = (obj) => {
     `
     return div;
 }
+
+
 
 export default{
     newCard,
