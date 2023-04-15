@@ -33,9 +33,42 @@ const newCard = (obj) => {
     return div;
 }
 
+const modalLocation = (cities) => {
+
+  const ul = $('#modalList')
+
+
+
+  cities.forEach(elem => {
+    const li = newEl('li');
+
+    li.className = `rounded-pill list-header justify-content-center pointer`
+
+    li.innerHTML = `<span class=" px-4 material-symbols-outlined">location_on</span> ${elem}, Finland`
+  
+    ul.appendChild(li);
+  })
+
+}
 
 
 export default{
     newCard,
-    $
+    $,
+    modalLocation
 }
+
+// <li class="rounded-pill list-header justify-content-center pointer ">
+// <span class=" px-4 material-symbols-outlined">
+//   location_on
+// </span> ${obj.city}, ${obj.country}</li>
+
+// <li class="rounded-pill list-header  justify-content-center pointer ">
+// <span class=" px-4 material-symbols-outlined">
+//   location_on
+// </span> ${obj.city}, ${obj.country}</li>
+
+// <li class="rounded-pill list-header  justify-content-center pointer ">
+// <span class=" px-4 material-symbols-outlined">
+//   location_on
+// </span> ${obj.city}, ${obj.country}</li>

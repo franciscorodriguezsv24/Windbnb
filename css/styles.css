@@ -54,6 +54,10 @@ font-family: var(--mulish);
     cursor: pointer;
 }
 
+.none-pointer{
+    cursor: auto;
+}
+
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 1,
@@ -63,6 +67,15 @@ font-family: var(--mulish);
   width:15.76px;
   height:15.76px ;
   box-sizing: border-box;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 200,
+  'GRAD' 0,
+  'opsz' 40
 }
 
 .tx-gray{
@@ -109,13 +122,15 @@ font-family: var(--mulish);
 
 .filter1{
     width: 426px;
+    height: fit-content;
+   
 }
 
 @media only screen and (max-width: 1200px){
     .botton-sr{
         position:fixed;
         left: 40%;
-        bottom:44%
+        bottom:28%
 }
 }
 @media only screen and (max-width: 576px){
@@ -124,6 +139,26 @@ font-family: var(--mulish);
        
         position:fixed;
         left: 35%;
-        bottom:44%
+        bottom:28%
+}
+
+.counter{
+    display: none;
 }
 }
+
+.list-filter {
+
+    list-style: none;
+    max-width: 500px;
+    min-width: 250px;
+    
+  
+
+}
+
+.list-header{
+    min-width: 150px;
+    max-width: 200px;
+}
+
