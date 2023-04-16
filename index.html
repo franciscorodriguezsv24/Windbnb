@@ -30,8 +30,9 @@
   <script src="./js/app.js" type="module" defer></script>
   <title>Document</title>
 </head>
-
+<!-- Inicio de la app. -->
 <body class="container">
+
   <header class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-lg-4 mt-3 gap-5">
     <div class="d-flex align-self-start align-self-md-center">
       <img src="./img/logo.png" alt="">
@@ -55,14 +56,14 @@
               <div class="modal-body row ">
                 <div class=" filter1 col-sm-12 col-xl-5 ">
                   <p class="mb-0 mul">location</p>
-                  <p class="mb-0 mul">city, country</p>
+                  <p class="mb-0 mul" id="city">city, country</p>
                 </div>
                 <div class="filter1 col-sm-12 col-xl-5 ">
                   <p class="mb-0 mul">Guests</p>
                   <p class="mb-0 mul gray">Add guests</p>
 
                 </div>
-                <button class=" red-bt botton-sr rd-start-bg rounded-4 col-xl-2 text-white d-flex flex-row" type="button">
+                <button class=" red-bt botton-sr rd-start-bg rounded-4 col-xl-2 text-white d-flex flex-row" type="button" id="btSearch">
                     <span class="material-symbols-outlined text-white pointer text-center icon-sr " >search</span>
                     <p class="m-0 mul">search</p>
                 </button>
@@ -74,28 +75,27 @@
                 </div>
                 <div class="counter w-50 col-6">
                   <div class=" container d-flex flex-column gap-4 ">
-                    <div>
+                    <div class="filter-guest-adult">
                       <p class="mb-0 mul">Adult</p>
                       <p class="mb-0 mul gray">Age 13 or above</p>
-                      <button type="button" class="btn btn-outline-secondary btn-sm">-</button>
-                      <spam>0</spam>
-                      <button type="button" class="btn btn-outline-secondary btn-sm">+</button>
+                      <button type="button" id="less" class="btn btn-outline-secondary btn-sm">-</button>
+                      <spam id="guestNumber" >0</spam>
+                      <button type="button" id="plus" class="btn btn-outline-secondary btn-sm">+</button>
                     </div>
-                 <div>
+                 <div class="filter-guest-children">
                      <p class="mb-0 mul">Children</p>
                      <p class="mb-0 mul gray">Ages 2-12</p>
-                     <button type="button" class="btn btn-outline-secondary btn-sm">-</button>
-                     <spam>0</spam>
-                     <button type="button" class="btn btn-outline-secondary btn-sm">+</button>
+                     <button type="button" id="lessChild" class="btn btn-outline-secondary btn-sm">-</button>
+                     <spam id="guestNumberChild">0</spam>
+                     <button type="button" id="plusChild" class="btn btn-outline-secondary btn-sm">+</button>
                  </div>
-                   
                   </div>
-                </div>
-              
+                 </div>
                 </div>
              </div>
            </div>
          </div>
+         <!-- Fin de las ventanas emergentes. -->
      
 
     </article>
@@ -110,7 +110,7 @@
     </div>
 
     <section class="container text-center">
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3" id="cardContainer">
+      <div class="row d-flex flex-row gap-1 justify-content-lg-start justify-content-xl-evenly" id="cardContainer">
 
         <!-- Aqui van los cards, cada uno debe llevar la clase 'col' -->
      

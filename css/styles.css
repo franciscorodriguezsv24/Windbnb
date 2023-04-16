@@ -121,19 +121,20 @@ font-family: var(--mulish);
 }
 
 .filter1{
-    width: 426px;
+    min-width: 550px;
+    max-width: 650px;
     height: fit-content;
    
 }
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 1235px){
     .botton-sr{
         position:fixed;
         left: 40%;
         bottom:28%
 }
 }
-@media only screen and (max-width: 576px){
+@media only screen and (max-width: 707px){
     .botton-sr{
    
        
@@ -150,8 +151,8 @@ font-family: var(--mulish);
 .list-filter {
 
     list-style: none;
-    max-width: 500px;
-    min-width: 250px;
+    max-width: 650px;
+    min-width: 350px;
     
   
 

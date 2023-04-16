@@ -12,7 +12,7 @@ const getData = async () => {
   return data;
 }
 
-
+//obtener filtradas las ciudades sin que estas se repitan. 
 const getCities = (data) =>{
 let cities = data.map(elem => elem.city)
 
@@ -24,16 +24,25 @@ cities = [...cities]
 return cities
 }
 
+const cityFilter = (arr, filter) => {
+   let filtered = arr.map( elem => `${elem.city}, ${elem.country}` === filter)
 
+   return filtered
+}
 
+const guestFilter = (arr, maxGuest) => {
 
+let filtered = arr.filter(elem => elem.maxGuests == maxGuest )
 
-
+return filtered
+}
 
 
 
 
 export default {
   getData,
-  getCities
+  getCities,
+  cityFilter,
+  guestFilter
 }
