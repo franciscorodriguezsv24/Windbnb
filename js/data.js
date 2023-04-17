@@ -25,7 +25,7 @@ return cities
 }
 
 const cityFilter = (getData, filter) => {
-   let filtered = getData.map( elem => elem.city == filter)
+   let filtered = getData.filter( elem => `${elem.city}, Finland` == filter.trim())
 
    return filtered
 }

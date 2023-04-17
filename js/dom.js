@@ -47,7 +47,7 @@ const modalLocation = (cities) => {
 
     li.className = `rounded-pill list-header justify-content-center pointer`
 
-    li.innerHTML = `<span class=" px-4 material-symbols-outlined">location_on</span> ${elem}`
+    li.innerHTML = `<span class=" px-4 material-symbols-outlined">location_on</span> ${elem}, Finland`
   
     ul.appendChild(li);
   })
@@ -140,9 +140,31 @@ const filterCard = (arr) => {
 
 }
 
+//stays number 
+
+const stayNumber = (obj) => {
+  const main = $('#stays')
+
+  main.innerHTML = `Stays ${obj}`
+
+  return main
+}
+
+//stays places
+
+const stayPlaces = (obj) => {
+  const main = $('#staysIn')
+
+  main.innerHTML = `Stays in ${obj}`
+
+  return main
+}
+
 export default{
     newCard,
     $,
     modalLocation,
-    filterCard
+    filterCard,
+    stayNumber,
+    stayPlaces
 }

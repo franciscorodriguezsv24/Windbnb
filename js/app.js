@@ -57,16 +57,27 @@ console.log(datacity)
        
     let filter = datacity;
 
+    dom.stayPlaces(filter)
   
     const finishFiltered = filter === '' ? showData : data.cityFilter(showData,filter);
-    console.log(showData)
-    console.log(finishFiltered);
+   
     dom.filterCard(finishFiltered)
+
+    const locationNumber = finishFiltered.length
+    
+    dom.stayNumber(locationNumber);
+    console.log (locationNumber)
+
+   
         })
 
     })
 
 })
+
+
+
+
 
 const buttonSearch = dom.$('#btSearch');
 
@@ -86,8 +97,10 @@ const buttonSearch = dom.$('#btSearch');
    const maxGuest = suma == 0 ? showData : data.guestFilter(showData, suma)
    
    dom.filterCard(maxGuest);
-  
 
+   const dataMaxGuests = maxGuest.length
+  
+   dom.stayNumber(dataMaxGuests);
  
 
     })
