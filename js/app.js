@@ -49,18 +49,17 @@ findList.forEach(elem => {
         const buttonSearch = dom.$('#btSearch');
 
 
-const dataGuestChild = elemt.srcElement.childNodes[1]
+const dataGuestChild = elemt.srcElement.childNodes[1].data;
 
 console.log(dataGuestChild)
 
     buttonSearch.addEventListener('click', () => {
        
-    let filter = dataGuestChild.data;
+    let filter = dataGuestChild;
 
-    console.log(typeof filter)
   
     const finishFiltered = filter === '' ? showData : data.cityFilter(showData,filter);
-    
+    console.log(showData)
     console.log(finishFiltered);
     dom.filterCard(finishFiltered)
         })

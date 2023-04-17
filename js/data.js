@@ -24,11 +24,12 @@ cities = [...cities]
 return cities
 }
 
-const cityFilter = (arr, filter) => {
-   let filtered = arr.map( elem => `${elem.city}, ${elem.country}` === filter)
+const cityFilter = (getData, filter) => {
+   let filtered = getData.map( elem => elem.city == filter)
 
    return filtered
 }
+
 
 const guestFilter = (arr, maxGuest) => {
 

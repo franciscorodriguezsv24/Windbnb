@@ -47,7 +47,7 @@ const modalLocation = (cities) => {
 
     li.className = `rounded-pill list-header justify-content-center pointer`
 
-    li.innerHTML = `<span class=" px-4 material-symbols-outlined">location_on</span> ${elem}, Finland`
+    li.innerHTML = `<span class=" px-4 material-symbols-outlined">location_on</span> ${elem}`
   
     ul.appendChild(li);
   })
