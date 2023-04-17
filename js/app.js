@@ -49,13 +49,13 @@ findList.forEach(elem => {
         const buttonSearch = dom.$('#btSearch');
 
 
-const dataGuestChild = elemt.srcElement.childNodes[1].data;
+const datacity = elemt.srcElement.childNodes[1].data;
 
-console.log(dataGuestChild)
+console.log(datacity)
 
     buttonSearch.addEventListener('click', () => {
        
-    let filter = dataGuestChild;
+    let filter = datacity;
 
   
     const finishFiltered = filter === '' ? showData : data.cityFilter(showData,filter);
