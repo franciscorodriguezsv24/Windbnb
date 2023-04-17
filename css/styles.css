@@ -4,6 +4,7 @@
     --red-start:#EB5757;
     --most-gray:#333333;
     --monserat: 'Montserrat', sans-serif;
+    --mulish:'Mulish', sans-serif
 }
 /* Font Family 
 font-family: 'Montserrat', sans-serif;
@@ -19,8 +20,15 @@ font-family: 'Mulish', sans-serif;
 }
 
 .rd-start{
-    color: var(--red-start);
+    color: var(--red-start)
+
 }
+
+.rd-start-bg{
+    background-color: var(--red-start)
+    
+}
+
 
 .mt-gray{
     color: var(--most-gray);
@@ -28,6 +36,10 @@ font-family: 'Mulish', sans-serif;
 
 .monrat{
     font-family: var(--monserat);
+}
+
+.mul{
+font-family: var(--mulish);
 }
 
 .card-img{
@@ -38,6 +50,13 @@ font-family: 'Mulish', sans-serif;
     height: 269px;
 }
 
+.pointer{
+    cursor: pointer;
+}
+
+.none-pointer{
+    cursor: auto;
+}
 
 .material-symbols-outlined {
   font-variation-settings:
@@ -50,8 +69,20 @@ font-family: 'Mulish', sans-serif;
   box-sizing: border-box;
 }
 
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 200,
+  'GRAD' 0,
+  'opsz' 40
+}
+
 .tx-gray{
     font-size: 14px;
+}
+.type{
+    margin-left: 12px;
 }
 
 .sp{
@@ -63,3 +94,72 @@ font-family: 'Mulish', sans-serif;
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
 }
+
+.hide{
+    display: none;
+}
+
+.modal-class{
+    max-width: 1800px;
+}
+.red-bt{
+    width: 127px;
+    height: 48px;
+}
+
+.botton-sr{
+    border: 0px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.icon-sr{
+    margin-bottom: 5px;
+}
+
+.filter1{
+    min-width: 550px;
+    max-width: 650px;
+    height: fit-content;
+   
+}
+
+@media only screen and (max-width: 1235px){
+    .botton-sr{
+        position:fixed;
+        left: 40%;
+        bottom:28%
+}
+}
+@media only screen and (max-width: 707px){
+    .botton-sr{
+   
+       
+        position:fixed;
+        left: 35%;
+        bottom:28%
+}
+
+.counter{
+    display: none;
+}
+}
+
+.list-filter {
+
+    list-style: none;
+    max-width: 650px;
+    min-width: 350px;
+    
+  
+
+}
+
+.list-header{
+    min-width: 150px;
+    max-width: 200px;
+}
+
