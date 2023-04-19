@@ -45,23 +45,22 @@ findList.forEach( elemt => {
 //filtro de ambos.
 const buttonSearch3 = dom.$('#btSearch');
 
+  //city
+  const datacity = dom.$('.modal').children;
+  const citi = datacity[0].childNodes[1].childNodes[3].childNodes[1].childNodes[3].childNodes[0].data;
+  //Number
+  const dataGuestChild = [...dom.$('.modal').children]  
+  let finaldatachild = dataGuestChild[0].childNodes[1].childNodes[3].childNodes[9].childNodes[1].childNodes[3].childNodes[7].childNodes[0].data
+  let numberDataChild2 = Number(finaldatachild);
+
+  const dataGuest = [...dom.$('.modal').children] 
+  let finaldata = dataGuest[0].childNodes[1].childNodes[3].childNodes[9].childNodes[1].childNodes[1].childNodes[7].childNodes[0].data
+  let numberData2 = Number(finaldata)
+
+  let suma2 = numberData2 + numberDataChild2
+
     buttonSearch3.addEventListener('click', () => {
-        //city
-        const datacity = dom.$('.modal').children;
-        const citi = datacity[0].childNodes[1].childNodes[3].childNodes[1].childNodes[3].childNodes[0].data;
-    console.log(citi)
-        //Number
-        const dataGuestChild = [...dom.$('.modal').children]  
-        let finaldatachild = dataGuestChild[0].childNodes[1].childNodes[3].childNodes[9].childNodes[1].childNodes[3].childNodes[7].childNodes[0].data
-        let numberDataChild2 = Number(finaldatachild);
-    
-        
-    
-        const dataGuest = [...dom.$('.modal').children] 
-        let finaldata = dataGuest[0].childNodes[1].childNodes[3].childNodes[9].childNodes[1].childNodes[1].childNodes[7].childNodes[0].data
-        let numberData2 = Number(finaldata)
-    
-        let suma2 = numberData2 + numberDataChild2
+      
 
 
         
@@ -97,7 +96,6 @@ const buttonSearch3 = dom.$('#btSearch');
     
        const suma = numberData + numberDataChild
 
-        if( suma !== 0 && citi.textContent !== citi){
             const maxGuest = data.guestFilter(showData, suma);
 
             console.log(maxGuest)
@@ -107,18 +105,22 @@ const buttonSearch3 = dom.$('#btSearch');
             const dataFinal = maxGuest.length
       
             dom.stayNumber(dataFinal);
-        }else if(suma !== 0 && citi.innerHTML == citi){
-       
-         const supremeFilter = data.supremeFilter(showData,citi,suma)
-         console.log(supremeFilter);
-
-
-         dom.filterCard(supremeFilter);
-
-         const dataMaxGuests = supremeFilter.length;
-
-         dom.stayNumber(dataMaxGuests);
+        if(citi === 'city, country'){
+            return
+        } else {
+            const supremeFilter = data.supremeFilter(showData,citi,suma)
+            console.log(supremeFilter);
+   
+   
+            dom.filterCard(supremeFilter);
+   
+            const dataMaxGuests = supremeFilter.length;
+   
+            dom.stayNumber(dataMaxGuests);
         }
-    })
+       
+      
+        }
+    )
       
        
