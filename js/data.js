@@ -33,9 +33,16 @@ const cityFilter = (getData, filter) => {
 
 const guestFilter = (arr, maxGuest) => {
 
-let filtered = arr.filter(elem => elem.maxGuests == maxGuest )
+let filtered = arr.filter(elem => elem.maxGuests >= maxGuest )
 
 return filtered
+}
+
+const supremeFilter = (arr,citi,maxGuest) => {
+
+  let filtered = arr.filter (elem => `${elem.city}, Finland` == citi.trim() && elem.maxGuests >= maxGuest )
+
+  return filtered
 }
 
 
@@ -45,5 +52,6 @@ export default {
   getData,
   getCities,
   cityFilter,
-  guestFilter
+  guestFilter,
+  supremeFilter
 }
